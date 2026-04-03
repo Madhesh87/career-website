@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import './globals.css';           // ← This line must be here
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AIChatbot from '@/components/AIChatbot';
@@ -7,7 +7,7 @@ import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'TECH TOTS | Smart Software Solutions',
-  description: 'Professional Web Development, Mobile Apps, UI/UX & Custom Software in India',
+  description: 'Professional Web Development, Mobile Apps, UI/UX & Custom Software',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

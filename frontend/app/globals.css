@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+
+:root {
+  --primary: #4F46E5;
+  --secondary: #22C55E;
+  --accent: #F59E0B;
+}
+
+body {
+  font-family: 'Inter', system_ui, sans-serif;
+}
+
+.heading-font {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Hero Background */
+.hero-bg {
+  background: linear-gradient(135deg, #f9fafb 0%, #f0f9ff 100%);
+}
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(90deg, #4F46E5 0%, #22C55E 100%);
+  box-shadow: 0 10px 15px -3px rgb(79 70 229 / 0.3);
+}
+
+.btn-gradient:hover {
+  box-shadow: 0 20px 25px -5px rgb(34 197 94 / 0.4);
+  transform: scale(1.05);
+}
+
+/* Card Hover */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 25px 25px 50px -12px rgb(79 70 229 / 0.15);
+}
+
+/* Nav Link */
+.nav-link {
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(to right, #4F46E5, #22C55E);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Line Clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
